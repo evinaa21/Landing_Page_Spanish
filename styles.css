@@ -966,12 +966,16 @@ body {
     #step6 .final-step-head { font-size: 1.1rem; }
     #step6 .final-desc { font-size: 0.9rem; }
 
-   
+    /* Make "Abierto ahora" line smaller on mobile */
+    #step6 .availability-compact .line {
+        font-size: 0.65rem !important;
+        padding: 0.3rem 0.6rem;
+    }
+
     #step6 .card-body {
         padding: 1.5rem 0.75rem;
     }
 
-   
     #step6 .why-trust {
         margin: 1.5rem 0 1.25rem;
         padding: 1.25rem 0.5rem;
@@ -986,20 +990,17 @@ body {
         box-sizing: border-box;
     }
 
-   
     .card {
         width: 100%;
         max-width: 100%;
         overflow-x: hidden;
     }
 
-   
     #step6 .card {
         margin-left: auto;
         margin-right: auto;
     }
 
-   
     #step6 .cta-button.large-phone {
         font-size: 1.25rem;
         padding: 0.9rem;
@@ -1007,153 +1008,152 @@ body {
         box-sizing: border-box;
     }
 
-   
     #step6 .urgency-text {
         font-size: 0.85rem !important;
     }
 }
 
 
-
-#step6 .bbb-cta-item .bbb-scale {
-    --seal-height: 120px;
-}
-
-
-@media (max-width: 767px) {
-    #step1 .bbb-scale .bbb-embed,
-    #step6 .bbb-scale .bbb-embed {
-        left: 35px !important;
-        transform: scale(calc(var(--seal-height) / var(--bbb-native-h))) translateX(-50%) !important;
+@media (max-width: 480px) {
+    /* Step 6 mobile styles for very small screens */
+    #step6 .card-body {
+        padding: 1rem 0.5rem;
     }
     
-   
+    #step6 .reassurance-text {
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+        padding: 0 0.25rem;
+    }
+    
+    #step6 .main-cta-section {
+        margin: 0.75rem 0 1rem;
+        padding: 1rem 0.5rem;
+        border-radius: 8px;
+    }
+    
+    #step6 .final-step-head {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.3;
+    }
+    
+    #step6 .final-desc {
+        font-size: 0.8rem;
+        line-height: 1.4;
+        margin-bottom: 0.75rem;
+    }
+    
+    #step6 .cta-button.large-phone {
+        font-size: 1.1rem;
+        padding: 0.8rem;
+        width: 100%;
+        max-width: none;
+        margin: 0.75rem 0;
+        border-radius: 8px;
+    }
+    
+    #step6 .availability-compact {
+        margin: 0.5rem 0 0.75rem;
+    }
+    
+    /* Make "Abierto ahora" even smaller on very small screens */
+    #step6 .availability-compact .line {
+        font-size: 0.58rem !important;
+        padding: 0.25rem 0.5rem;
+    }
+    
+    #step6 .availability-compact .sub {
+        font-size: 0.65rem !important;
+        margin-top: 0.25rem;
+    }
+    
+    #step6 .urgency-text {
+        font-size: 0.8rem !important;
+        padding: 0 0.25rem;
+        line-height: 1.4;
+    }
+    
+    #step6 .testimonial {
+        margin-top: 1rem;
+        padding: 0.75rem;
+        border-radius: 6px;
+    }
+    
+    #step6 .testimonial blockquote {
+        font-size: 0.9rem;
+    }
+    
+    #step6 .testimonial cite {
+        font-size: 0.8rem;
+    }
+    
+    #step6 .why-trust {
+        margin: 1rem 0;
+        padding: 0.75rem 0.25rem;
+    }
+    
+    #step6 .why-trust h4 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    #step6 .why-trust li {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+    
     #step6 .bbb-cta-item .bbb-scale {
         --seal-height: 80px;
     }
-}
-
-.bbb-cta-item {
-    margin: 1.75rem auto 0;
-    display: flex;
-    justify-content: center;
-}
-
-
-
-
-
-
-
-
-.reviews-section {
-    margin: 1.5rem auto 0;
-    max-width: 100%;
-    text-align: center;
-    padding: 0 0.5rem;
-}
-
-.reviews-summary {
-    margin: 0 0 0.5rem 0;
-    font-size: clamp(0.85rem, 2.2vw, 0.95rem);
-    font-weight: 700;
-    color: #374151;
-    line-height: 1.3;
-}
-
-.reviews-grid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-   
-    gap: clamp(0.6rem, 2vw, 1.2rem);
-    align-items: flex-end;
-}
-
-.review-item {
-    flex-shrink: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.review-item img {
-    --seal-height: clamp(90px, 10vw, 150px);
-    height: var(--seal-height);
-    width: auto;
-    max-width: 100%;
-    object-fit: contain;
-    display: block;
-    border: 0;
-    background: transparent;
-}
-
-
-.bbb-scale {
-    --seal-height: clamp(56px, 5.5vw, 100px);
-    --bbb-native-w: 300;
-    --bbb-native-h: 115;
-    position: relative;
-    height: var(--seal-height);
-    width: calc(var(--seal-height) * (var(--bbb-native-w) / var(--bbb-native-h)));
-    overflow: hidden;
-    display: block;
-}
-
-.bbb-scale .bbb-embed {
-    position: absolute;
-    top: -100 px; 
-    left: 80px;
-    width: calc(var(--bbb-native-w) * 2px);
-    height: calc(var(--bbb-native-h) * 2px);
-    border: 0;
-    transform-origin: top left;
-    transform: scale(calc(var(--seal-height) / (var(--bbb-native-h) * 1px)));
-}
-
-
-.review-item .bbb-embed {
-    width: auto;
-    height: auto;
-}
-
-@media (max-width: 480px) {
-   
-    .reviews-section {
-        background-color: #f8f9fa;
-        border: 1px solid #e9ecef;
-        border-radius: var(--radius);
-        padding: 1rem;
-        margin-top: 1.5rem;
-    }
-
-   
-    .reviews-summary {
-        margin-bottom: 0.75rem;
-    }
-
-    .reviews-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0 0.5rem;
-        padding: 0;
-    }
-    .review-item:nth-child(1) { margin-right: 0; }
-    .review-item:nth-child(4) { margin-right: 0; }
-
-   
-    .review-item:nth-child(3),
-    .review-item:nth-child(4) {
-        margin-top: -10px;
-    }
-
-    .review-item img {
-        --seal-height: clamp(110px, 30vw, 150px);
+    
+    /* Ensure proper container behavior for step 6 on mobile */
+    .main-container {
+        padding: 0.5rem 0.25rem;
         width: 100%;
-        object-fit: cover;
+        max-width: 100%;
+        box-sizing: border-box;
     }
+    
+    #step6 .card {
+        margin: 0;
+        border-radius: 8px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Step 6 reviews section mobile improvements */
+    #step6 .reviews-section {
+        margin-top: 1rem;
+        padding: 0.75rem 0.25rem;
+    }
+    
+    #step6 .reviews-summary {
+        font-size: 0.85rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    #step6 .reviews-grid {
+        gap: 0 0.25rem;
+    }
+    
+    #step6 .review-item img {
+        --seal-height: clamp(80px, 25vw, 120px);
+    }
+}
+
+
+@media (max-width: 767px) and (min-width: 481px) {
+  
+    #step1 .card-body h2 {
+        font-size: 1.1rem;
+    }
+    
+
+    #step1 .question label {
+        font-size: 1.35rem !important;
+        margin: 0.75rem auto 0.75rem;
+        font-weight: 700;
 }
 
 
