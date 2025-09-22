@@ -71,19 +71,17 @@ document.addEventListener('DOMContentLoaded', function() {
         const q3 = document.getElementById('q3');
         const step4 = document.getElementById('step4');
         
-        
         q3.classList.add('fading-out');
         
         setTimeout(() => {
             q3.classList.add('hidden');
             q3.classList.remove('fading-out');
             
-            
             const questionGroup = document.querySelector('.question-group');
             if (questionGroup) {
                 questionGroup.innerHTML = `
                     <div class="loading-step">
-                        <h2>Reviewing answers...</h2>
+                        <h2>Revisando respuestas...</h2>
                         <div class="loading-spinner"></div>
                     </div>
                 `;
@@ -91,11 +89,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 questionGroup.style.transform = 'translateY(0)';
             }
             
-            
             const inlineBar = document.getElementById('inlineProgressBar');
             const stepLabel = document.getElementById('stepLabel');
             if (inlineBar) inlineBar.style.width = '66%';
-            if (stepLabel) stepLabel.textContent = 'STEP 4 OF 6';
+            if (stepLabel) stepLabel.textContent = 'PASO 4 DE 6';
             
         }, 400);
     };
@@ -105,19 +102,15 @@ document.addEventListener('DOMContentLoaded', function() {
         const questionGroup = document.querySelector('.question-group');
         const h2Element = questionGroup.querySelector('.loading-step h2');
         
-        
         h2Element.style.opacity = '0';
         
         setTimeout(() => {
-            
-            h2Element.textContent = 'Matching with best option...';
-            
+            h2Element.textContent = 'Buscando la mejor opción...';
             
             const inlineBar = document.getElementById('inlineProgressBar');
             const stepLabel = document.getElementById('stepLabel');
             if (inlineBar) inlineBar.style.width = '83%';
-            if (stepLabel) stepLabel.textContent = 'STEP 5 OF 6';
-            
+            if (stepLabel) stepLabel.textContent = 'PASO 5 DE 6';
             
             h2Element.style.opacity = '1';
         }, 300);
