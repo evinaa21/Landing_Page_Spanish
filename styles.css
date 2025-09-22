@@ -1,0 +1,1626 @@
+:root {
+    --primary-color: #005A9C;
+    --success-color: #0037ff;
+    --danger-color: #dc3545;
+    --text-dark: #212529;
+    --text-light: #f8f9fa;
+    --bg-light: #f0f4f8;
+    --card-bg: #ffffff;
+    --border-color: #dee2e6;
+    --font-sans: 'Inter', sans-serif;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    --radius: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    min-height: 100vh;      
+    display: flex;          
+    flex-direction: column; 
+    font-size: 16px;
+}
+
+.site-header {
+    padding: 1rem 1rem 0;
+    text-align: center;
+}
+
+.logo {
+    max-width: 180px;
+    height: auto;
+}
+
+
+.card-body p {
+    font-size: 1rem;
+    color: #343a40;
+    margin: 0.75rem 0 0.75rem;
+}
+
+
+.card-header {
+    padding: 2rem 1.5rem 1.75rem;
+}
+.card-header h1 {
+    font-size: clamp(2rem, 4.5vw, 2.6rem) !important;
+    line-height: 1.22;
+    font-weight: 800;
+    margin-bottom: 1.25rem;
+    letter-spacing: 0.2px;
+}
+
+
+@media (max-width: 767px) {
+    #step1 .card-header h1 {
+        font-size: 1.55rem !important;
+        line-height: 1.2;
+    }
+    #step1 .question label {
+        font-size: 1.3rem;
+        margin: 0.75rem auto 0.75rem;
+    }
+    .step-status {
+        margin-bottom: 1rem;
+    }
+    .step-status__bar { height: 10px; }
+    #step1 .option-btn {
+        padding: 1rem 0.75rem;
+        font-size: 1rem;
+        border-radius: 9999px;
+    }
+    
+    /* Make the "Just answer 3 quick questions" smaller */
+    #step1 .card-body h2 {
+        font-size: 1.1rem;
+    }
+    
+    /* Make the individual question labels bigger */
+    #step1 .question label {
+        font-size: 1.4rem !important; /* Increased from 1.3rem */
+        margin: 0.75rem auto 0.75rem;
+        font-weight: 700; /* Make them bolder too */
+    }
+}
+
+
+.card-body h2 {
+    font-size: clamp(1.2rem, 2.6vw, 1.35rem);
+    margin-bottom: 1.25rem;
+    color: var(--primary-color);
+}
+
+
+.step-status {
+    margin-bottom: 1.1rem;
+}
+.step-status__label {
+    letter-spacing: 0.09em;
+}
+
+
+.option-btn {
+    letter-spacing: 0.2px;
+}
+
+
+#step6 .reassurance-text {
+    font-size: clamp(1.05rem, 2.2vw, 1.2rem);
+    color: #243447;
+    margin-bottom: 1.1rem;
+}
+
+#step6 .main-cta-section {
+    margin: 1rem 0 1.25rem;
+    padding: 1.5rem 1.25rem;
+}
+
+#step6 .final-step-head {
+    font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+    font-weight: 800;
+    letter-spacing: 0.6px;
+    margin-bottom: 0.6rem;
+}
+
+#step6 .final-desc {
+    color: #5c6770;
+    font-size: 0.8rem;
+    line-height: 1.55;
+    margin: 0 0 1rem 0;
+}
+
+#step6 .cta-button.large-phone {
+    font-size: clamp(1.4rem, 3.5vw, 1.6rem);
+    line-height: 1.1;
+    padding: 1.2rem 2rem;
+    letter-spacing: 0.4px;
+    width: auto;
+     max-width: 420px;
+    margin: 1rem auto;
+}
+
+
+#step6 .availability-compact .line {
+    font-size: 0.95rem;
+    color: #0e1885;
+}
+#step6 .availability-compact .sub {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+
+#step6 .why-trust {
+    margin: 1.5rem 0 1.25rem;
+    padding: 1.25rem 1rem;
+}
+#step6 .why-trust h4 {
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+#step6 .why-trust ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.45rem;
+}
+#step6 .why-trust li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0;                
+    line-height: 1.55;
+    font-size: 0.95rem;
+    color: #2b2f33;
+}
+
+
+#step6 .why-trust li::before {
+    content: "✓";
+    display: inline-block;
+    width: 1.1em;
+    text-align: center;
+    color: var(--success-color);
+    font-weight: 800;
+    line-height: 1;
+    transform: translateY(0.1em);
+}
+
+
+#step6 .testimonial {
+    margin-top: 1.25rem;
+    padding: 1.25rem;
+    border-left: 4px solid var(--success-color);
+    background-color: #f8f9fa;
+    border-radius: 0 8px 8px 0;
+}
+#step6 .testimonial blockquote {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+}
+#step6 .testimonial cite {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+
+.loading-step h2 {
+    font-size: clamp(1.25rem, 2.8vw, 1.5rem);
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.main-container {
+    padding: 0.5rem 1rem 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    flex: 1 0 auto;         
+    transition: max-width 0.3s ease-in-out;
+}
+
+.step {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.step.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.card-header {
+    padding: 2rem 1.5rem 1.75rem;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.card-header.success {
+    background-color: var(--success-color);
+}
+
+.card-header h1 {
+    font-size: clamp(2rem, 4.5vw, 2.6rem) !important;
+    line-height: 1.22;
+    font-weight: 800;
+    margin-bottom: 1.25rem;
+    letter-spacing: 0.2px;
+}
+
+
+@media (max-width: 767px) {
+    #step1 .card-header h1 {
+        font-size: 1.55rem !important;
+        line-height: 1.2;
+    }
+    #step1 .question label {
+        font-size: 1.3rem;
+        margin: 0.75rem auto 0.75rem;
+    }
+    .step-status {
+        margin-bottom: 1rem;
+    }
+    .step-status__bar { height: 10px; }
+    #step1 .option-btn {
+        padding: 1rem 0.75rem;
+        font-size: 1rem;
+        border-radius: 9999px;
+    }
+    
+    /* Make the "Just answer 3 quick questions" smaller */
+    #step1 .card-body h2 {
+        font-size: 1.1rem;
+    }
+    
+    /* Make the individual question labels bigger */
+    #step1 .question label {
+        font-size: 1.4rem !important; /* Increased from 1.3rem */
+        margin: 0.75rem auto 0.75rem;
+        font-weight: 700; /* Make them bolder too */
+    }
+}
+
+
+.trust-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .25rem 1rem;
+    font-size: clamp(.75rem, 1.2vw, .88rem);
+    line-height: 1.2;
+    opacity: .95;
+    padding-top: .6rem;
+    border-top: none;
+}
+
+.trust-bar span {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+
+.trust-bar span::before {
+    content: "✓";
+    font-weight: 800;
+    font-size: .9rem;
+    line-height: 1;
+    margin-right: .4rem;
+    color: #28a745;
+    opacity: 1;
+}
+
+
+@media (max-width: 767px) {
+    .trust-bar { gap: .2rem .6rem; font-size: .57rem; }
+    .trust-bar span::before { font-size: .85rem; margin-right: .35rem; }
+}
+
+.card-body {
+    padding: 2rem 1.5rem;
+}
+
+.card-body h2 {
+    text-align: center;
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+    color: var(--primary-color);
+}
+
+.question-group {
+    position: relative;
+   
+    min-height: 18rem; 
+    overflow: hidden;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.question {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    pointer-events: auto;
+}
+
+.question.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+}
+
+.question.fading-out {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-20px);
+}
+
+.question label {
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.option-btn {
+    width: 100%;
+    padding: 1rem 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    color: white;
+    border: 2px solid #007bff;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.option-btn:hover {
+    background: linear-gradient(135deg, #0056b3 0%, #004085 100%);
+    border-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
+.option-btn.selected {
+    background: linear-gradient(135deg, #0004ff 0%, #020a80 100%);
+    color: var(--text-light);
+    border-color: #0004ff;
+    box-shadow: 0 6px 20px rgba(35, 62, 152, 0.4);
+}
+
+.bbb-single-item {
+    margin: -1.5rem auto 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+#step1 .bbb-single-item .bbb-scale {
+    --seal-height: clamp(80px, 10vw, 115px);
+}
+
+.safety-text {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-top: 2rem;
+}
+
+.card-footer {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.phone-link {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+.reassurance-text {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.final-progress {
+    max-width: 560px;
+    margin: 0 auto 1.5rem auto;
+    text-align: center;
+}
+
+.final-progress__label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #6c757d;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.final-progress__bar {
+    width: 100%;
+    height: 12px;
+    background: #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.final-progress__bar-fill {
+    height: 100%;
+    width: 100%;
+    background: var(--success-color);
+    transition: width 0.4s ease-in-out;
+}
+
+
+.main-cta-section {
+    background-color: var(--bg-light);
+    border: 2px solid var(--success-color);
+    border-radius: var(--radius);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.cta-phone-section {
+    margin: 1.5rem 0;
+}
+
+.cta-label {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.cta-button.large-phone {
+    display: block;
+    width: 100%;
+    background-color: var(--success-color);
+    color: var(--text-light);
+    padding: 1.25rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 24px rgba(0, 55, 255, 0.3);
+    border: 3px solid var(--success-color);
+}
+
+.cta-button.large-phone:hover {
+    background-color: #274afd;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(0, 55, 255, 0.4);
+}
+
+
+.final-cta-box {
+    display: none;
+}
+
+
+@media (min-width: 992px) {
+    .main-container {
+        max-width: 840px;
+    }
+}
+
+
+@media (max-width: 767px) {
+    #step1 .safety-text {
+        margin-top: -2rem !important;
+    }
+    #step1 .reviews-section {
+        margin-top: 0.5rem;
+    }
+    body {
+        padding-bottom: 0;
+    }
+    
+    .legal-footer {
+        position: static;
+        margin-top: auto;   
+    }
+    
+    .card-footer {
+        display: block;
+    }
+    
+    .main-container {
+        padding: 1rem 0.5rem;
+        margin-bottom: 0;
+    }
+    
+    .card-body {
+        padding: 1.5rem 1rem;
+    }
+    
+    .question-group {
+       
+        min-height: 16rem;
+    }
+    
+    .options-grid {
+        max-width: 280px;
+        gap: 0.5rem;
+    }
+    
+    .option-btn {
+        padding: 0.8rem 0.4rem;
+        font-size: 0.85rem;
+        border-radius: 20px;
+    }
+    
+    .main-container.center-quiz {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1.25rem .75rem 1rem;
+        min-height: calc(100vh - 6px - 140px);
+    }
+    .main-container.center-quiz .card {
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+
+#step1 .card-header {
+    background: #fff;
+    color: var(--text-dark);
+    border-bottom: 1px solid var(--border-color);
+}
+#step1 .card-header h1 {
+    font-size: clamp(1.65rem, 5.2vw, 2.1rem) !important;
+    line-height: 1.22;
+    font-weight: 800;
+}
+
+
+@media (max-width: 767px) {
+    #step1 .card-header h1 {
+        font-size: 1.75rem !important;
+        line-height: 1.25;
+    }
+}
+
+#step1 .trust-bar {
+    border-top: none;
+    opacity: 0.9;
+}
+
+
+.step-status {
+    max-width: 560px;
+    margin: 0 auto 1.25rem auto;
+    text-align: center;
+}
+.step-status__label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #6c757d;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+.step-status__bar {
+    width: 100%;
+    height: 12px;
+    background: #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+}
+.step-status__bar-fill {
+    height: 100%;
+    width: 0%;
+    background: var(--success-color);
+    transition: width 0.4s ease-in-out;
+}
+
+
+
+#step1 .question-group {
+}
+
+#step1 .question label {
+    display: block;
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.65rem;
+    margin: 1rem auto 1rem;
+    max-width: 720px;
+    line-height: 1.35;
+}
+
+#step1 .options-grid {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+    width: 100%;
+    margin: 0.5rem auto 0;
+    gap: 0.9rem;
+}
+
+
+#step1 .option-btn {
+    padding: 1.1rem 1rem;
+    font-size: 1.05rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    letter-spacing: 0.25px;
+    box-shadow: 0 8px 24px rgba(0, 123, 255, 0.25);
+}
+#step1 .option-btn:hover {
+    transform: translateY(-2px);
+}
+
+
+#step1 .safety-text {
+    margin-top: -2rem;
+}
+
+
+#step1 .card {
+    border-radius: 16px;
+}
+
+
+@media (max-width: 767px) {
+    #step1 .card-header h1 {
+        font-size: 1.5rem !important;
+        line-height: 1.25;
+    }
+    #step1 .question label {
+        font-size: 1.3rem;
+        margin: 0.75rem auto 0.75rem;
+    }
+    .step-status {
+        margin-bottom: 1rem;
+    }
+    .step-status__bar { height: 10px; }
+    #step1 .option-btn {
+        padding: 1rem 0.75rem;
+        font-size: 1rem;
+        border-radius: 9999px;
+    }
+    
+    /* Make the "Just answer 3 quick questions" smaller */
+    #step1 .card-body h2 {
+        font-size: 1.1rem;
+    }
+    
+    /* Make the individual question labels bigger */
+    #step1 .question label {
+        font-size: 1.4rem !important; /* Increased from 1.3rem */
+        margin: 0.75rem auto 0.75rem;
+        font-weight: 700; /* Make them bolder too */
+    }
+}
+
+
+.loading-step {
+    text-align: center;
+    padding: 2rem 0;
+    min-height: 16rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-step h2 {
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid var(--success-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 767px) {
+    .loading-step {
+        min-height: 12rem;
+        padding: 1.5rem 0;
+    }
+    
+    .loading-step h2 {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .loading-spinner {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+
+
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: var(--card-bg);
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: var(--radius);
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.close:hover {
+    color: #000;
+}
+
+.modal-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.disclaimer-text {
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+.disclaimer-text p {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.all-caps {
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.final-step-head {
+    font-size: 1.0rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+
+#step6 .card-header { display: none; }
+
+
+.availability-compact {
+    text-align: center;
+    margin: .5rem 0 1rem;
+    color: #495057;
+}
+.availability-compact .line {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .9rem;
+    font-weight: 600;
+    color: #1d3557;
+    background-color: #f1faee;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    border: 1px solid #a8dadc;
+}
+.availability-compact .line::before {
+    content: '';
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    margin-right: 0.5rem;
+    background-color: #28a745;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.7);
+}
+.availability-compact .sub {
+    display: block;
+    font-size: .8rem;
+    color: #6c757d;
+    margin-top: 0.5rem;
+}
+
+
+#step6 .cta-button.large-phone {
+    font-size: 1.6rem;
+    letter-spacing: 0.5px;
+}
+
+
+#step6 .main-cta-section { margin-top: 0.75rem; }
+#step6 .final-step-head { margin-bottom: .5rem; }
+#step6 .reassurance-text { margin-bottom: 1rem; }
+
+
+
+#step6 .main-cta-section {
+    background: #ffffff;                
+    border-color: #e5e7eb;              
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+#step6 .final-step-head {
+    color: #111827;                     
+    font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+    letter-spacing: 0.4px;
+}
+
+#step6 .final-desc {
+    color: #374151;                     
+    font-size: 0.95rem;                 
+    line-height: 1.6;
+}
+
+#step6 .availability-compact .line {
+    color: #111827;
+    font-weight: 700;
+}
+#step6 .availability-compact .sub {
+    color: #4b5563;
+}
+
+
+.urgency-text {
+    color: #b91c1c !important;          
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+}
+
+
+@media (max-width: 767px) {
+    #step6 .final-desc,
+    #step7 .final-desc { font-size: 0.75rem; line-height: 1.5; }
+    #step6 .why-trust li,
+    #step7 .why-trust li { font-size: 0.9rem; }
+    #step6 .availability-compact .line {
+        font-size: 0.8rem;
+        white-space: nowrap;
+    }
+    .availability-compact .sub { font-size: 0.75rem; }
+    #step6 .final-step-head { font-size: 1.1rem; }
+    #step6 .final-desc { font-size: 0.9rem; }
+
+   
+    #step6 .card-body {
+        padding: 1.5rem 0.75rem;
+    }
+
+   
+    #step6 .why-trust {
+        margin: 1.5rem 0 1.25rem;
+        padding: 1.25rem 0.5rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #step6 .main-cta-section {
+        margin: 1rem 0 1.25rem;
+        padding: 1.5rem 0.75rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+   
+    .card {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+   
+    #step6 .card {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+   
+    #step6 .cta-button.large-phone {
+        font-size: 1.25rem;
+        padding: 0.9rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+   
+    #step6 .urgency-text {
+        font-size: 0.85rem !important;
+    }
+}
+
+
+
+#step6 .bbb-cta-item .bbb-scale {
+    --seal-height: 120px;
+}
+
+
+@media (max-width: 767px) {
+    #step1 .bbb-scale .bbb-embed,
+    #step6 .bbb-scale .bbb-embed {
+        left: 35px !important;
+        transform: scale(calc(var(--seal-height) / var(--bbb-native-h))) translateX(-50%) !important;
+    }
+    
+   
+    #step6 .bbb-cta-item .bbb-scale {
+        --seal-height: 80px;
+    }
+}
+
+.bbb-cta-item {
+    margin: 1.75rem auto 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+.reviews-section {
+    margin: 1.5rem auto 0;
+    max-width: 100%;
+    text-align: center;
+    padding: 0 0.5rem;
+}
+
+.reviews-summary {
+    margin: 0 0 0.5rem 0;
+    font-size: clamp(0.85rem, 2.2vw, 0.95rem);
+    font-weight: 700;
+    color: #374151;
+    line-height: 1.3;
+}
+
+.reviews-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+   
+    gap: clamp(0.6rem, 2vw, 1.2rem);
+    align-items: flex-end;
+}
+
+.review-item {
+    flex-shrink: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.review-item img {
+    --seal-height: clamp(90px, 10vw, 150px);
+    height: var(--seal-height);
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+    border: 0;
+    background: transparent;
+}
+
+
+.bbb-scale {
+    --seal-height: clamp(56px, 5.5vw, 100px);
+    --bbb-native-w: 300;
+    --bbb-native-h: 115;
+    position: relative;
+    height: var(--seal-height);
+    width: calc(var(--seal-height) * (var(--bbb-native-w) / var(--bbb-native-h)));
+    overflow: hidden;
+    display: block;
+}
+
+.bbb-scale .bbb-embed {
+    position: absolute;
+    top: -100 px; 
+    left: 80px;
+    width: calc(var(--bbb-native-w) * 2px);
+    height: calc(var(--bbb-native-h) * 2px);
+    border: 0;
+    transform-origin: top left;
+    transform: scale(calc(var(--seal-height) / (var(--bbb-native-h) * 1px)));
+}
+
+
+.review-item .bbb-embed {
+    width: auto;
+    height: auto;
+}
+
+@media (max-width: 480px) {
+   
+    .reviews-section {
+        background-color: #f8f9fa;
+        border: 1px solid #e9ecef;
+        border-radius: var(--radius);
+        padding: 1rem;
+        margin-top: 1.5rem;
+    }
+
+   
+    .reviews-summary {
+        margin-bottom: 0.75rem;
+    }
+
+    .reviews-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 0.5rem;
+        padding: 0;
+    }
+    .review-item:nth-child(1) { margin-right: 0; }
+    .review-item:nth-child(4) { margin-right: 0; }
+
+   
+    .review-item:nth-child(3),
+    .review-item:nth-child(4) {
+        margin-top: -10px;
+    }
+
+    .review-item img {
+        --seal-height: clamp(110px, 30vw, 150px);
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .logo {
+        max-width: 150px;
+    }
+    #step1 .card-header {
+        padding: 1rem 0.25rem;
+    }
+    #step1 .card-header h1 {
+        font-size: 1.35rem !important;
+        margin-bottom: 0.5rem;
+        line-height: 1.15;
+    }
+    #step1 .question label {
+        font-size: 1.1rem;
+        margin: 0.5rem auto 0.5rem;
+    }
+    .question-group {
+        min-height: 14rem;
+    }
+    #step1 .option-btn {
+        padding: 0.8rem 0.75rem;
+        font-size: 0.9rem;
+    }
+    .bbb-single-item {
+        margin-top: -1rem;
+    }
+    .reviews-section {
+        margin-top: 1rem;
+    }
+}
+
+
+
+
+@media (max-width: 480px) {
+ 
+    #step1 .card-body h2 {
+        font-size: 1rem;
+    }
+   
+    #step1 .question label {
+        font-size: 1.2rem !important;
+        font-weight: 700;
+        line-height: 1.25;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+    
+
+    .logo {
+        max-width: 140px;
+    }
+    #step1 .card-header {
+        padding: 1rem 0.5rem;
+    }
+    #step1 .card-header h1 {
+        font-size: 1.25rem !important;
+        margin-bottom: 0.5rem;
+        line-height: 1.15;
+    }
+    #step1 .question label {
+        font-size: 1.1rem !important;
+        margin: 0.5rem auto 0.5rem;
+        padding: 0 0.25rem;
+    }
+    .question-group {
+        min-height: 14rem;
+    }
+    #step1 .option-btn {
+        padding: 0.8rem 0.75rem;
+        font-size: 0.9rem;
+    }
+    .bbb-single-item {
+        margin-top: -1rem;
+    }
+    .reviews-section {
+        margin-top: 1rem;
+    }
+}
+
+
+@media (max-width: 767px) and (min-width: 481px) {
+  
+    #step1 .card-body h2 {
+        font-size: 1.1rem;
+    }
+    
+
+    #step1 .question label {
+        font-size: 1.35rem !important;
+        margin: 0.75rem auto 0.75rem;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+}
+
+@media (max-width: 480px) and (min-width: 375px) {
+    #step1 .question label {
+        font-size: 1.15rem !important;
+        line-height: 1.25;
+        padding: 0 0.5rem;
+    }
+}
+
+@media (max-width: 374px) {
+    #step1 .question label {
+        font-size: 1.05rem !important;
+        line-height: 1.2;
+        padding: 0 0.25rem;
+        margin: 0.4rem auto 0.4rem;
+    }
+    
+    #step1 .card-header h1 {
+        font-size: 1.15rem !important;
+    }
+    
+    .trust-bar {
+        font-size: 0.5rem;
+    }
+}
+
+.legal-footer {
+    background-color: #212529;
+    color: #adb5bd;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.8rem;
+    border-top: 1px solid #495057;
+    flex-shrink: 0;
+}
+
+.legal-links {
+    margin-bottom: 1rem;
+}
+
+.legal-links a {
+    color: #f8f9fa;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.legal-links a:hover {
+    text-decoration: underline;
+}
+
+.platform-disclaimer {
+    max-width: 600px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+.copyright {
+    opacity: 0.8;
+    margin: 0;
+}
+
+
+
+
+
+#step7 .reassurance-text.negative {
+    font-size: 1.1rem;
+    color: #495057;
+    margin-bottom: 1.5rem;
+}
+
+#step7 .main-cta-section {
+    background: #fff8f8;
+    border: 2px solid #fecaca;
+    position: relative;
+    padding-top: 3.5rem;
+    border-radius: var(--radius);
+}
+
+
+#step7 .main-cta-section::before {
+    content: '×';
+    display: block;
+    position: absolute;
+    top: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 56px;
+    height: 56px;
+    line-height: 52px;
+    font-size: 3rem;
+    font-weight: 300;
+    text-align: center;
+    color: var(--danger-color);
+    background-color: #fff;
+    border: 3px solid #fecaca;
+    border-radius: 50%;
+}
+
+#step7 .final-step-head {
+    color: var(--danger-color);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+#step7 .final-desc {
+    font-size: 0.95rem;
+    color: #6b7280;
+    max-width: 450px;
+    margin: 0 auto 1.5rem;
+    line-height: 1.6;
+}
+
+#step7 .cta-button.restart {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 6px 18px rgba(0, 90, 156, 0.25);
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+}
+
+#step7 .cta-button.restart:hover {
+    background-color: #004a7d;
+    border-color: #004a7d;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 90, 156, 0.35);
+}
+
+#step7 .why-trust {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+#step7 .why-trust h4 {
+    color: #374151;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#step7 .why-trust ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.75rem;
+}
+
+#step7 .why-trust li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+#step7 .why-trust li::before {
+    content: "→";
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.1rem;
+    width: 1em;
+    text-align: center;
+}
+
+
+@media (max-width: 767px) {
+    #step7 .main-cta-section {
+        padding-top: 3rem;
+    }
+    
+    #step7 .main-cta-section::before {
+        width: 48px;
+        height: 48px;
+        line-height: 44px;
+        font-size: 2.5rem;
+        top: -24px;
+    }
+    
+    #step7 .final-step-head {
+        font-size: 1.1rem;
+    }
+    
+    #step7 .final-desc {
+        font-size: 0.85rem;
+    }
+    
+    #step7 .cta-button.restart {
+        font-size: 1.1rem;
+        padding: 0.9rem 1.5rem;
+    }
+    
+    #step7 .why-trust {
+        padding: 1.25rem 1rem;
+        margin-top: 1.5rem;
+    }
+}
+
+
+.exit-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 1rem;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.exit-modal.show {
+    display: flex;
+}
+
+.exit-modal__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(2px);
+}
+
+.exit-modal__panel {
+    position: relative;
+    max-width: 380px;
+    width: 100%;
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transform: scale(0.9);
+    animation: modalSlideIn 0.3s ease-out forwards;
+}
+
+@keyframes modalSlideIn {
+    to { transform: scale(1); }
+}
+
+.exit-modal__close {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #999;
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+.exit-modal h2 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.exit-modal p {
+    color: #4b5563;
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
+}
+
+.exit-modal__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.exit-modal .btn {
+    padding: 0.875rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.exit-modal .btn--primary {
+    background: linear-gradient(135deg, #0004ff 0%, #020a80 100%);
+    color: white;
+    font-size: 0.95rem;
+    padding: 0.8rem 1.5rem;
+}
+
+.exit-modal .btn--primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(0, 4, 255, 0.4);
+}
+
+.exit-modal .btn--secondary {
+    background: #f3f4f6;
+    color: #374151;
+    font-size: 0.95rem;
+    padding: 0.8rem 1.5rem;
+    border: 1px solid #d1d5db;
+}
+
+.exit-modal .btn--link {
+    background: transparent;
+    color: #9ca3af;
+    text-decoration: underline;
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    border: none;
+}
+
+
+.exit-modal__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+
+.exit-modal .btn--highlighted {
+    background: linear-gradient(135deg, #1877f2 0%, #166fe5 100%);
+    color: white;
+    font-size: 1.2rem;
+    padding: 1.1rem 1.5rem;
+    font-weight: 700;
+    box-shadow: 0 8px 24px rgba(24, 119, 242, 0.4);
+    border: 2px solid #1877f2;
+}
+
+.exit-modal .btn--highlighted:hover {
+    background: linear-gradient(135deg, #166fe5 0%, #1464d8 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(24, 119, 242, 0.5);
+}
+
+
+.exit-modal .btn--secondary {
+    background: #f3f4f6;
+    color: #374151;
+    font-size: 0.95rem;
+    padding: 0.8rem 1.5rem;
+    border: 1px solid #d1d5db;
+}
+
+.exit-modal .btn--link {
+    background: transparent;
+    color: #9ca3af;
+    text-decoration: underline;
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    border: none;
+}
+
+@media (max-width: 480px) {
+    .exit-modal__panel {
+        margin: 1rem;
+        padding: 1.25rem;
+    }
+    
+    .exit-modal h2 {
+        font-size: 1.2rem;
+    }
+    
+    .exit-modal .btn--primary {
+        font-size: 0.9rem;
+        padding: 0.75rem 1.25rem;
+    }
+}
